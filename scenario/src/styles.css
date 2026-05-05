@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+:root {
+  --bg-color: #121212;
+  --text-primary: #ffffff;
+  --text-purple: #9c27b0;
+  --text-yellow: #ffeb3b;
+  --form-bg: #212121;
+  --input-bg: #333333;
+  --input-border: #555555;
+  --button-primary: var(--text-purple);
+  --button-accent: var(--text-yellow);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: var(--text-purple);
+}
+
+p,
+span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--form-bg);
+  padding: 30px;
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+form > div {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+div > label {
+  color: var(--text-purple);
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="checkbox"],
+select {
+  padding: 8px;
+  margin-bottom: 15px;
+  background-color: var(--input-bg);
+  color: white;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+}
+input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+}
+
+button[type="submit"] {
+  background-color: var(--button-accent);
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
