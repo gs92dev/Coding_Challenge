@@ -33,6 +33,9 @@ export class TaskService {
       next: () => {
         this.refreshTasks();
       },
+      error: (err: Error) => {
+        console.error('Error updating task:', err);
+      },
     });
   }
 
