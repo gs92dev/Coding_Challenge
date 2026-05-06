@@ -1,5 +1,5 @@
 <h2>Task Update Component</h2>
-<form (ngSubmit)="onSubmit()">
+<form #updateForm="ngForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="taskId">Task Id to Update:</label>
     <input
@@ -37,5 +37,5 @@
       [(ngModel)]="task.complete"
     />
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" [disabled]="updateForm.invalid">Submit</button>
 </form>

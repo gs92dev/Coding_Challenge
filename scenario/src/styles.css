@@ -80,3 +80,14 @@ button[type="submit"] {
   cursor: pointer;
   font-weight: bold;
 }
+
+button[type="submit"]:hover:not([disabled]) {
+  transition: color 0.3s ease;
+  background-color: var(--button-primary);
+  color: #fff;
+}
+button[disabled] {
+  background-color: var(--input-border);
+  color: #777;
+  cursor: not-allowed;
+}
